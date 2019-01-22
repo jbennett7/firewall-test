@@ -10,24 +10,12 @@ pipeline {
       }
     } 
     stage('Download Components') {
-//      parallel {
         stage('Maven') {
           steps {
             sh '''bash prime-maven-repo-compliance-libs.sh'''
           }
         }
-//        stage('NPM') {
-//          steps {
-//            sh '''bash prime-npm-repo.sh'''
-//            }
-//        }
-//        stage('PyPi') {
-//          steps {
-//            sh '''bash prime-pypi-repo.sh'''
-//          }
-//        }
-//      }
-//    }
+
     stage('Test Container') {
       parallel {
         stage('Test Container') {
@@ -54,5 +42,5 @@ pipeline {
       }
     }
   }
-  
+}
 }
