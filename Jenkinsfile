@@ -47,7 +47,7 @@ pipeline {
          }
          stage('NPM Scan') {
            steps {
-              nexusPolicyEvaluation(iqApplication: 'npm', iqStage: 'build', iqScanPatterns: [[scanPattern: 'node_module.tar.gz.partaa']])
+              nexusPolicyEvaluation(iqApplication: 'npm', iqStage: 'build', iqScanPatterns: [[scanPattern: 'nodeGoat.tar.gz']])
            }
          }
          stage('PyPi Scan') {
