@@ -10,21 +10,32 @@ pipeline {
       }
     } 
     stage('Maven') {
-          steps {
-            sh '''
+      steps {
+        sh '''
                     bash prime-maven-repo-compliance-libs.sh
-            '''
+           '''
           }
         }
-        stage('Create tar') {
-           steps { 
-              sh ''' 
+     stage('Create tar') {
+       steps { 
+        sh ''' 
                     tar cvzf java-dependencies.tar.gz *.jar && rm *.jar *.pom
 
-                 ''' 
-           }
+           ''' 
         }
-    }
-    
-  }
+     }
+     stage('Nexus Lifecycle Eval') {
+       steps {
+          nexusPolicyEvaluation(iqApplication: 'test-components-la', iqStage: 'build', iqScanPatterns: [[scanPattern: '']])
+       }
+     }
+     stage('Clean Up') {
+       steps { 
+         sh ''' 
+                    rm *.tar.gz 
+            '''
+         }
+     }
+   }
+}
 
