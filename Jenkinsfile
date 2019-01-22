@@ -26,7 +26,7 @@ pipeline {
             sh '''bash prime-pypi-repo.sh'''
           }
         }
-      
+      }
     }
     stage('Test Container') {
       parallel {
