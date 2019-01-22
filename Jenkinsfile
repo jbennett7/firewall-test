@@ -38,11 +38,23 @@ pipeline {
            ''' 
         }
      }
-     stage('Nexus Lifecycle Eval') {
-       steps {
-          nexusPolicyEvaluation(iqApplication: 'test-components-la', iqStage: 'build', iqScanPatterns: [[scanPattern: '']])
-       }
-     }
+     stage('Nexus Lifecycle Evals') {
+        parallel {
+          stage('Java Scan') {
+           steps {
+              nexusPolicyEvaluation(iqApplication: 'test-components-la', iqStage: 'build', iqScanPatterns: [[scanPattern: 'java-dependencies.tar.gz']])
+           }
+         }
+         stage('NPM Scan') {
+           steps {
+              nexusPolicyEvaluation(iqApplication: 'npm', iqStage: 'build', iqScanPatterns: [[scanPattern: 'node_module.tar.gz.partaa']])
+           }
+         }
+         stage('PyPi Scan') {
+           steps {
+              nexusPolicyEvaluation(iqApplication: 'PyPi', iqStage: 'build', iqScanPatterns: [[scanPattern: 'requirements.txt']])
+           }
+         }
      stage('Firewall Test') {
       steps {
         sh '''
