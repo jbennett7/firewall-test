@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 usage() {
   echo "Usage: $0 [-v <2|3>] [-p <port>] [-m <max>]"
