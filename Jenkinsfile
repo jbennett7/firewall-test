@@ -12,7 +12,7 @@ pipeline {
     stage('Maven') {
           steps {
             sh '''bash prime-maven-repo-compliance-libs.sh
-            tar xvzf java-dependencies.tar.gz *.jar && rm *.jar *.pom'''
+            tar cvzf java-dependencies.tar.gz *.jar && rm *.jar *.pom'''
           }
         }
     }
