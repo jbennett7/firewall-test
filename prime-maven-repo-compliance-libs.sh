@@ -32,7 +32,7 @@ done
 
 case "${VERSION}" in
   2)
-    REPO_URL=http://nexus:$PORT/nexus/content/groups/public/
+    REPO_URL=http://nexus:8081/repository/maven-quarentine/
     ;;
   3)
     REPO_URL=http://nexus:8081/repository/central/
@@ -48,7 +48,6 @@ function getPackage() {
 
   # download with curl but make it quiet in terms of output
   echo "Priming Maven: $1"
-  wget -nv $REPO_URL$1 
   curl -o /dev/null --silent --head --write-out '%{http_code}\n' $REPO_URL$1
 }
 

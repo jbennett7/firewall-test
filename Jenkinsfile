@@ -48,7 +48,7 @@ pipeline {
      stage('Firewall Test') {
       steps {
         sh '''
-                    bash firewall-test.sh
+                    bash prime-maven-repo-compliance-libs.sh -v 2
            '''
           }
         }
