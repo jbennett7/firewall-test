@@ -8,14 +8,27 @@ pipeline {
                     echo "M2_HOME = ${M2_HOME}"
            '''
       }
-    } 
-    stage('Maven') {
-      steps {
-        sh '''
-                    bash prime-maven-repo-compliance-libs.sh
-           '''
+    }
+    stage('....Downloading....') {
+      parallel {
+        stage('Maven') {
+          steps {
+            sh '''
+                        bash prime-maven-repo-compliance-libs.sh
+               '''
           }
         }
+        Stage('npm') {
+          steps {
+            echo "...npm run here'
+          }
+        }
+        Stages('pypi')
+          steps {
+            echo '...pypi run here'
+          }
+      }
+    }
      stage('Create tar') {
        steps { 
         sh ''' 
