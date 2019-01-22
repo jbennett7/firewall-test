@@ -48,7 +48,7 @@ function getPackage() {
 
   # download with curl but make it quiet in terms of output
   echo "Priming Maven: $1"
-  wget $REPO_URL$1 
+  wget -nv $REPO_URL$1 
 }
 
 getPackage org/springframework/boot/spring-boot-starter-data-mongodb/2.0.5.RELEASE/spring-boot-starter-data-mongodb-2.0.5.RELEASE.jar
