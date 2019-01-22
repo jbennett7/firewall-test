@@ -20,7 +20,9 @@ pipeline {
         }
         stage('npm') {
           steps {
-            echo "...npm run here"
+            withNPM(npmrcConfig: 'npmrc') {
+                bash prime-npm-repo.sh
+            }
           }
         }
         stage('pypi') {
