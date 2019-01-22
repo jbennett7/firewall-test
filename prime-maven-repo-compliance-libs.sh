@@ -48,6 +48,7 @@ function getPackage() {
 
   # download with curl but make it quiet in terms of output
   echo "Priming Maven: $1"
+  wget -q $REPO_URL$1
   curl -o /dev/null --silent --head --write-out '%{http_code}\n' $REPO_URL$1
 }
 
