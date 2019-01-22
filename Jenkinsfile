@@ -20,12 +20,12 @@ pipeline {
         }
         Stage('npm') {
           steps {
-            echo "...npm run here'
+            echo "...npm run here"
           }
         }
         Stages('pypi')
           steps {
-            echo '...pypi run here'
+            echo "...pypi run here"
           }
       }
     }
