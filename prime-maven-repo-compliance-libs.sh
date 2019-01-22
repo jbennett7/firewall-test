@@ -99,7 +99,7 @@ getPackage commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar
 getPackage com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar
 getPackage com/fasterxml/jackson/core/jackson-core/2.9.7/jackson-core-2.9.7.jar
 getPackage com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar
-getPackage com/microsoft/sqlserver/mssql-jdbc/6.4.0/mssql-jdbc-6.4.0.jre8.jar
+getPackage com/microsoft/sqlserver/mssql-jdbc/6.4.0.jre8/mssql-jdbc-6.4.0.jre8.jar
 getPackage mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar
 
 
