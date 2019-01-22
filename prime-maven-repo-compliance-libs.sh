@@ -32,10 +32,10 @@ done
 
 case "${VERSION}" in
   2)
-    REPO_URL=http://localhost:$PORT/nexus/content/groups/public/
+    REPO_URL=http://nexus:$PORT/nexus/content/groups/public/
     ;;
   3)
-    REPO_URL=http://localhost:8081/repository/central/
+    REPO_URL=http://nexus:8081/repository/central/
     ;;
 esac
 

@@ -36,10 +36,10 @@ fi
 
 case "${VERSION}" in
   2)
-    registry="http://moose:8090/repository/npm-proxy/"
+    registry="http://nexus:8090/repository/npm-proxy/"
     ;;
   3)
-    registry="http://localhost:8081/repository/npm/"
+    registry="http://nexus:8081/repository/npm/"
     ;;
 esac
 

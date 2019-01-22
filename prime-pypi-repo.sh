@@ -26,7 +26,7 @@ while getopts "v:p:r:" option; do
   esac
 done
 
-REPO_URL="http://localhost:$PORT"
+REPO_URL="http://nexus:$PORT"
 
 TEMPDIR="/tmp/prime-pypi"
 echo "Using temporary work folder $TEMPDIR"
