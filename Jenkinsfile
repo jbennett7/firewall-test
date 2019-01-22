@@ -18,15 +18,16 @@ pipeline {
                '''
           }
         }
-        Stage('npm') {
+        stage('npm') {
           steps {
             echo "...npm run here"
           }
         }
-        Stages('pypi')
+        stage('pypi') {
           steps {
             echo "...pypi run here"
           }
+        }
       }
     }
      stage('Create tar') {
