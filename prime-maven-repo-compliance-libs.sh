@@ -73,10 +73,10 @@ getPackage org/camunda/bpm/dmn/camunda-engine-feel-juel/7.9.0/camunda-engine-fee
 getPackage org/camunda/bpm/camunda-engine-plugin-connect/7.9.0/camunda-engine-plugin-connect-7.9.0.jar
 getPackage org/camunda/bpm/camunda-engine-plugin-spin/7.9.0/camunda-engine-plugin-spin-7.9.0.jar
 getPackage org/camunda/bpm/camunda-engine-spring/7.9.0/camunda-engine-spring-7.9.0.jar
-getPackage org/camunda/bpm/camunda-identity-ldap/7.9.0/camunda-identity-ldap-7.9.0.jar
-getPackage org/camunda/bpm/camunda-spin-core/1.5.1/camunda-spin-core-1.5.1.jar
-getPackage org/camunda/bpm/camunda-spin-dataformat-all/1.5.1/camunda-spin-dataformat-all-1.5.1.jar
-getPackage org/camunda/bpm/camunda-template-engines-freemarker/1.0.1/camunda-template-engines-freemarker-1.0.1.jar
+getPackage org/camunda/bpm/identity/camunda-identity-ldap/7.9.0/camunda-identity-ldap-7.9.0.jar
+getPackage org/camunda/template-engines/camunda-template-engines-freemarker/1.0.1/camunda-template-engines-freemarker-1.0.1.jar
+getPackage org/camunda/spin/camunda-spin-core/1.5.1/camunda-spin-core-1.5.1.jar
+getPackage org/camunda/spin/camunda-spin-dataformat-all/1.5.1/camunda-spin-dataformat-all-1.5.1.jar
 getPackage org/camunda/bpm/model/camunda-xml-model/7.9.0/camunda-xml-model-7.9.0.jar
 getPackage org/springframework/spring-aop/3.1.2.RELEASE/spring-aop-3.1.2.RELEASE.jar
 getPackage org/springframework/spring-asm/3.1.2.RELEASE/spring-asm-3.1.2.RELEASE.jar
