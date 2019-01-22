@@ -101,5 +101,5 @@ getPackage com/fasterxml/jackson/core/jackson-core/2.9.7/jackson-core-2.9.7.jar
 getPackage com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar
 getPackage com/microsoft/sqlserver/mssql-jdbc/6.4.0/mssql-jdbc-6.4.0.jre8.jar
 getPackage mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar
-getPackage com/oracle/ojdbc6/11.2.0/ojdbc6-11.2.0.jar
+
 

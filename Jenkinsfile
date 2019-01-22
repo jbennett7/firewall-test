@@ -10,31 +10,24 @@ pipeline {
       }
     } 
     stage('Download Components') {
-      parallel {
-        stage('NPM') {
-          steps {
-            sh '''bash prime-npm-repo.sh
-            npm install --registry=http://nexus:8081/repository/npm/ --prefix . @angular/animations@7.1.0 --loglevel error
-            npm install --registry=http://nexus:8081/repository/npm/ --prefix . @angular/animations@7.1.3 --loglevel error
-            npm install --registry=http://nexus:8081/repository/npm/ --prefix . @angular/animations@6.1.7 --loglevel error
-
-
-
-            '''
-            }
-        }
+//      parallel {
         stage('Maven') {
           steps {
             sh '''bash prime-maven-repo-compliance-libs.sh'''
           }
         }
-        stage('PyPi') {
-          steps {
-            sh '''bash prime-pypi-repo.sh'''
-          }
-        }
-      }
-    }
+//        stage('NPM') {
+//          steps {
+//            sh '''bash prime-npm-repo.sh'''
+//            }
+//        }
+//        stage('PyPi') {
+//          steps {
+//            sh '''bash prime-pypi-repo.sh'''
+//          }
+//        }
+//      }
+//    }
     stage('Test Container') {
       parallel {
         stage('Test Container') {
