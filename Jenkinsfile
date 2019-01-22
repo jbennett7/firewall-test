@@ -9,8 +9,7 @@ pipeline {
            '''
       }
     } 
-    stage('Download Components') {
-        stage('Maven') {
+    stage('Maven') {
           steps {
             sh '''bash prime-maven-repo-compliance-libs.sh'''
           }
