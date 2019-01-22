@@ -15,7 +15,7 @@ pipeline {
             sh '''bash prime-maven-repo-compliance-libs.sh'''
           }
         }
-
+}
     stage('Test Container') {
       parallel {
         stage('Test Container') {
@@ -42,5 +42,4 @@ pipeline {
       }
     }
   }
-}
 }
