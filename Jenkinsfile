@@ -62,6 +62,8 @@ pipeline {
            '''
           }
         }
+        }
+        }
      stage('Clean Up') {
        steps { 
          sh ''' 
