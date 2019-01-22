@@ -20,8 +20,7 @@ pipeline {
         }
         stage('npm') {
           steps {
-            withNPM(npmrcConfig: 'npmrc') {
-                npm --fetch-retry-maxtimeout=5 --fetch-retry-mintimeout=2 --fetch-retry=1 --fetch-retry-factor=1 --registry="http://nexus:8081/repository/npm/" install --prefix . @angular/animations@7.1.0 --loglevel error
+            
             }
           }
         }
