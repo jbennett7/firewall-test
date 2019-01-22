@@ -20,6 +20,7 @@ pipeline {
         }
         stage('npm') {
           steps {
+            echo "...npm runs here"
           }
         }
         stage('pypi') {
