@@ -43,13 +43,6 @@ pipeline {
           nexusPolicyEvaluation(iqApplication: 'test-components-la', iqStage: 'build', iqScanPatterns: [[scanPattern: '']])
        }
      }
-     stage('Clean Up') {
-       steps { 
-         sh ''' 
-                    rm *.tar.gz 
-            '''
-         }
-     }
      stage('Firewall Test') {
       steps {
         sh '''
@@ -57,6 +50,13 @@ pipeline {
            '''
           }
         }
+     stage('Clean Up') {
+       steps { 
+         sh ''' 
+                    rm *.tar.gz *.jar*
+            '''
+         }
+     }
    }
 }
 
