@@ -55,16 +55,16 @@ pipeline {
               nexusPolicyEvaluation(iqApplication: 'PyPi', iqStage: 'build', iqScanPatterns: [[scanPattern: 'requirements.txt']])
            }
          }
-     stage('Firewall Test') {
+        }
+      }
+    stage('Firewall Test') {
       steps {
         sh '''
                     bash prime-maven-repo-compliance-libs.sh -v 2
            '''
-          }
-        }
-        }
-        }
-     stage('Clean Up') {
+      } 
+    }
+    stage('Clean Up') {
        steps { 
          sh ''' 
                     rm *.tar.gz *.jar*
