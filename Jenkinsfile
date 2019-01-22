@@ -20,8 +20,6 @@ pipeline {
         }
         stage('npm') {
           steps {
-            
-            }
           }
         }
         stage('pypi') {
