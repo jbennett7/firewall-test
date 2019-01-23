@@ -35,7 +35,7 @@ case "${VERSION}" in
     REPO_URL=http://localhost:$PORT/nexus/content/groups/public/
     ;;
   3)
-    REPO_URL=http://ec2-3-88-22-238.compute-1.amazonaws.com:8081/repository/maven-central/
+    REPO_URL=http://ec2-54-165-203-133.compute-1.amazonaws.com:8081/repository/maven-quarentine/
     ;;
 esac
 
